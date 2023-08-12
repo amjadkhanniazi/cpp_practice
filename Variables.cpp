@@ -40,9 +40,10 @@ int main(){
     // int x=10;
     // x>>=2;
     // cout<<x;
-    int x=3;
-    int y=5;
-    cout<<(x<y);
+    string fn="Amjad";
+    string sn="Khan";
+    string fullname=fn.append(" <space> "+sn);
     
+    cout<<fullname;
     return 0;
 }
