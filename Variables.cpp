@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 const int minPerHour=60;
 const float PI=3.1415;
@@ -29,9 +30,19 @@ int main(){
     // int x=1;
     // bool y=false;
     // cout<<x+y;
-    char a = 65, b = 66, c = 67;
-    cout<<a;
-    cout<<endl<<b;   
-    cout<<endl<<c;
+    // char a = 65, b = 66, c = 67;
+    // cout<<a;
+    // cout<<endl<<b;   
+    // cout<<endl<<c;
+    // string str="hello";
+    // cout<<str;
+    //bitwise operators
+    // int x=10;
+    // x>>=2;
+    // cout<<x;
+    int x=3;
+    int y=5;
+    cout<<(x<y);
+    
     return 0;
 }
