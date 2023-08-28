@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 class arrays{
 public:
 //reverse array
@@ -40,23 +41,49 @@ void printArray(int arr[],int end){
     }
 }
 };
+
+//Array Sorting Algos
+class sortArray{
+public:
+//selection sort
+void selectionSort(int arr[],int end){
+    int min=0;
+    for(int i=0;i<end;i++){
+        min=i;
+        for(int j=i+1;j<end;j++){
+            if(arr[j]<arr[min]){
+                min=j;
+            }
+        }
+        int temp=arr[i];
+        arr[i]=arr[min];
+        arr[min]=temp;
+    }
+}
+};
 //main function
 int main(){
-    int arr[]={1,2,3,4,5};
-    int end=sizeof(arr)/sizeof(int);
+    // int arr[]={1,2,3,4,5};
+    // int end=sizeof(arr)/sizeof(int);
     
-    int start=0;
-    arrays myArray;
+    // int start=0;
+    // arrays myArray;
 
-    myArray.printArray(arr,end);
-    //reverse array
-    myArray.arrayReverse(arr,start,end-1);
-    myArray.printArray(arr,end);
-    //Reverse Array Using Reccursion
-    myArray.arrayReverseReccursion(arr,start,end-1);
-    myArray.printArray(arr,end);
-    //Array Rotation
-    myArray.arrayRotationRightShift(arr,start,end-1);
+    // myArray.printArray(arr,end);
+    // //reverse array
+    // myArray.arrayReverse(arr,start,end-1);
+    // myArray.printArray(arr,end);
+    // //Reverse Array Using Reccursion
+    // myArray.arrayReverseReccursion(arr,start,end-1);
+    // myArray.printArray(arr,end);
+    // //Array Rotation
+    // myArray.arrayRotationRightShift(arr,start,end-1);
+    // myArray.printArray(arr,end);
+    int arr[]={3,6,1,9,2,5};
+    int end=sizeof(arr)/sizeof(int);
+    sortArray srtArr;
+    srtArr.selectionSort(arr,end);
+    arrays myArray;
     myArray.printArray(arr,end);
     return 0;
 }
