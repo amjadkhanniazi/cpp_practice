@@ -35,8 +35,9 @@ void arrayRotationRightShift(int arr[],int start, int end){
 //print array
 void printArray(int arr[],int end){
     int i=0;
+    cout<<"\nArray is: ";
     while(i<end){
-        cout<<arr[i]<<endl;
+        cout<<arr[i]<<", ";
         i++;
     }
 }
@@ -60,29 +61,43 @@ void selectionSort(int arr[],int end){
         arr[min]=temp;
     }
 }
+// bubble sort
+void inertionSort(int arr[],int end){
+    for(int i=1;i<end;i++){
+        int key=arr[i];
+        int j=i-1;
+        while(j>=0 && arr[j]>key){
+            arr[j+1]=arr[j];
+            j--;
+        }
+        arr[j+1]=key;
+    }
+}
 };
 //main function
 int main(){
-    // int arr[]={1,2,3,4,5};
-    // int end=sizeof(arr)/sizeof(int);
+/*    int arr[]={1,2,3,4,5};
+    int end=sizeof(arr)/sizeof(int);
     
-    // int start=0;
-    // arrays myArray;
+    int start=0;
+    arrays myArray;
 
-    // myArray.printArray(arr,end);
-    // //reverse array
-    // myArray.arrayReverse(arr,start,end-1);
-    // myArray.printArray(arr,end);
-    // //Reverse Array Using Reccursion
-    // myArray.arrayReverseReccursion(arr,start,end-1);
-    // myArray.printArray(arr,end);
-    // //Array Rotation
-    // myArray.arrayRotationRightShift(arr,start,end-1);
-    // myArray.printArray(arr,end);
+    myArray.printArray(arr,end);
+    //reverse array
+    myArray.arrayReverse(arr,start,end-1);
+    myArray.printArray(arr,end);
+    //Reverse Array Using Reccursion
+    myArray.arrayReverseReccursion(arr,start,end-1);
+    myArray.printArray(arr,end);
+    //Array Rotation
+    myArray.arrayRotationRightShift(arr,start,end-1);
+    myArray.printArray(arr,end);*/
+
     int arr[]={3,6,1,9,2,5};
     int end=sizeof(arr)/sizeof(int);
     sortArray srtArr;
-    srtArr.selectionSort(arr,end);
+    srtArr.inertionSort(arr, end);
+    //srtArr.selectionSort(arr,end);*/
     arrays myArray;
     myArray.printArray(arr,end);
     return 0;
